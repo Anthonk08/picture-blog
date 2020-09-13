@@ -7,22 +7,46 @@
     <link rel="stylesheet" href="./style.css" title="text/css">
 </head>
 <body>
-    <div>
-        <!--Encabezado-->
-        <header>
-            <h1>Blog De Imagenes</h1>
+    <div id="general">
+
+        <!--Cabeza de la pagina-->
+        <header id="header">
+            <h1>PHOTO BLOG</h1>
         </header>
-
+        
         <!--Contenido de la pagina-->
-        <p>Aquí esta el texto</p>
+        <div id = "contenido">
+            <div class="textBox">
+                <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
+            </div>
+            
+            <div class="bottonPhoto">
+                <input type="file" id="newPhoto" accept="image/*">
+                <label for="newPhoto">
+                    Choose an image
+                </label>
+            </div>
 
-        <!--Donde estara el Footer-->
-        <footer>
-            <p>
-                Hecho por &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>
-            </p>
+            <button type="submit" class="btnUnpload"> Unpload </button>
+            <!--Para que no suba al lado de los botones-->
+            <div class="clearfix"></div>
+
+            <!--Cuadro donde estara la foto-->
+            <div class="element">
+
+            </div>
+
+        </div>
+        
+        <div class="clearfix"></div>
+
+        <!--Pie de pagina-->
+        <footer id="footer">
+            Todos los derechos reservados &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>
         </footer>
+
     </div>
     
+    <script src="./index.js"></script>
 </body>
 </html>
