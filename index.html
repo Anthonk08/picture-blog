@@ -15,32 +15,36 @@
         </header>
         
         <!--Contenido de la pagina-->
-        <div id = "contenido">
-            <div class="textBox">
-                <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
-            </div>
-            
-            <div class="bottonPhoto">
-                <input type="file" id="newPhoto" accept="image/*">
-                <label for="newPhoto">
-                    Choose an image
-                </label>
-            </div>
+        <div id = "content">
+            <form id="contenido">
+                <!--Text area-->
+                <div class="textBox">
+                    <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
+                </div>
 
-            <button type="submit" class="btnUnpload"> Unpload </button>
-            <!--Para que no suba al lado de los botones-->
-            <div class="clearfix"></div>
+                <!--Subir imagen-->
+                <div class="bottonPhoto">
+                    <input type="file" id="newPhoto" accept="image/*" name="newPhoto">
+                    <label for="newPhoto">
+                        Choose an image
+                    </label>
+                </div>
+                <!--Botón-->
+                <button type="submit" class="btnUnpload"> Unpload </button>
+                
+                <!--Para que no suba al lado de los botones-->
+                <div class="clearfix"></div>
 
-            <!--Cuadro donde estara la foto-->
-            <div class="element">
-
-            </div>
-
+                <!--Cuadro donde estara la foto-->
+                <div class="element">
+                    
+                </div>
+            </form>
         </div>
-        
+
+        <!--Para que no suba al lado de los botones-->
         <div class="clearfix"></div>
 
-        <!--Pie de pagina-->
         <footer id="footer">
             Todos los derechos reservados &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>
         </footer>

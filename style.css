@@ -82,10 +82,14 @@ label{
     margin: 25px; 
     margin-left: 10px;
     width: 800px;
-    height: 400px;
-    background-color: #1a1a1b;
+    height: auto;
+    background-color: #444445;
     border: 1px solid #534d4d;
     color: white;
+}
+
+p {
+    margin: 20px;
 }
 
 footer{
