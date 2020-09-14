@@ -16,7 +16,7 @@
         
         <!--Contenido de la pagina-->
         <div id = "content">
-            <form id="contenido">
+            <form id="contenido" method="post" enctype="multipart/form-data">
                 <!--Text area-->
                 <div class="textBox">
                     <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
@@ -24,7 +24,7 @@
 
                 <!--Subir imagen-->
                 <div class="bottonPhoto">
-                    <input type="file" id="newPhoto" accept="image/*" name="newPhoto">
+                    <input type="file" id="newPhoto" onchange="preview(this)" name="newPhoto">
                     <label for="newPhoto">
                         Choose an image
                     </label>
@@ -34,10 +34,10 @@
                 
                 <!--Para que no suba al lado de los botones-->
                 <div class="clearfix"></div>
-
-                <!--Cuadro donde estara la foto-->
-                <div class="element">
-                    
+                
+                <!--Cuadro donde estara la foto y el texto-->
+                <div id="placePost" class="element">
+                  
                 </div>
             </form>
         </div>
