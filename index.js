@@ -6,12 +6,14 @@ function savePost(e) {
     let textBlog = document.getElementById('textBlog').value;
     let newPhoto = document.getElementById('newPhoto').value;
 
+    //Objeto
     const post = {
         textBlog,
         newPhoto
     };
 
-    if (localStorage.getItem('posts') === null){
+    if (!localStorage.getItem('posts')){
+        //Arreglo
         let posts = [];
         posts.push(post);
         localStorage.setItem('posts', JSON.stringify(posts));
