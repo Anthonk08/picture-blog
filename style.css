@@ -39,7 +39,7 @@ body{
     float: left;
     width: 100%;
     margin-left: 200px;
-    
+    min-height: 550px;
 }
 
 #contenido .textBox #textBlog{
@@ -78,7 +78,7 @@ label{
     width: 150px;
 }
 
-#contenido .element img{
+#contenido .post {
     margin: 25px; 
     margin-left: 10px;
     width: 800px;
@@ -88,8 +88,17 @@ label{
     color: white;
 }
 
-#contenido .element p {
+#contenido .post img{
+    width: 800px;
+    height: 400px;
+}
+
+#contenido .post p{
     margin: 20px;
+}
+
+.post {
+    padding: 5px;
 }
 
 footer{
