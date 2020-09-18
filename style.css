@@ -78,7 +78,7 @@ label{
     width: 150px;
 }
 
-#contenido .element{
+#contenido .element img{
     margin: 25px; 
     margin-left: 10px;
     width: 800px;
@@ -88,7 +88,7 @@ label{
     color: white;
 }
 
-p {
+#contenido .element p {
     margin: 20px;
 }
 
