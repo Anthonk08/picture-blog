@@ -42,9 +42,10 @@ body{
     
 }
 
-#contenido .textBox #textBlog{
+#contenido .textBox #textBlog {
     float: left;
     font-size: 15px;
+    margin: 2px;
     margin-left: 10px;
     padding-left: 15px;
     border: 1px solid #343536;

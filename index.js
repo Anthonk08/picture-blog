@@ -27,8 +27,7 @@ function savePost(e) {
     document.getElementById('contenido').reset();
 }
 
-
-//Funcion del Post con imagen y texto
+//La funcion que capta los datos y muestra la imagen y el texto.
 function getPost() {
     const file = document.querySelector("input[type=file]").files[0];
     let posts = JSON.parse(localStorage.getItem("posts"));
@@ -37,7 +36,6 @@ function getPost() {
 
     var newElementP = document.createElement("p");
     var preview = document.createElement("img");
-    
     
     for (let i = 0; i < posts.length; i++) {
         let newPhoto = posts[i].newPhoto;
