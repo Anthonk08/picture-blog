@@ -1,2 +1,4 @@
 # picture-blog
-Un blog de imagenes, realizado solo con HTML, CSS y JavaScript puro
+## Description
+An image blog, made with HTML, CSS and JavaScript.
+Some libraries such as Jquery and Ajax will be used.
