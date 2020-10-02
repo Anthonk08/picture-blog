@@ -16,7 +16,7 @@ body{
 #general{
     width: 1200px;
     margin: 0px auto;
-    margin-top: 20px;
+    margin-top: 10px;
     border: 1px solid #343536;
     background-color: #1a1a1b;
 }
@@ -37,7 +37,7 @@ body{
 
 #mainMenu{
     float: left;
-    width: 100%;
+    width: 96%;
     margin-left: 200px;
     
 }
@@ -81,9 +81,9 @@ label{
     width: 150px;
 }
 
-#mainMenu .post {
-    margin: 25px; 
-    margin-left: 10px;
+#placePost .newPost {
+    margin: 20px; 
+    margin-left: 200px;
     width: 800px;
     height: auto;
     background-color: #444445;
@@ -91,12 +91,12 @@ label{
     color: white;
 }
 
-#mainMenu .post img{
+#placePost .newPost img{
     width: 800px;
     height: 500px;
 }
 
-.post {
+.newPost {
     padding: 5px;
 }
 
