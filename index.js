@@ -58,7 +58,7 @@ function getPost() {
             /*Post del texto*/
             newElementP.textContent = `${textBlog}`;
             newDiv.appendChild(newElementP);
-            newDiv.classList.add("post");
+            newDiv.classList.add("newPost");
             postsView.appendChild(newDiv);
         }
     }
