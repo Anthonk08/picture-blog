@@ -35,14 +35,14 @@ body{
     clear: both;
 }
 
-#contenido{
+#mainMenu{
     float: left;
     width: 100%;
     margin-left: 200px;
     
 }
 
-#contenido .textBox #textBlog {
+#mainMenu .textBox #textBlog {
     float: left;
     font-size: 15px;
     margin: 2px;
@@ -62,24 +62,26 @@ input[type="file"]{
 
 label{
     color: #6c6e71;
-    height: 30px;
-    width: 150px;
-    font-size: 15px;
+    margin-top: 2px;
+    height: 25px;
+    width: 145px;
+    font-size: 14px;
     background-color: #1a1a1b;
     margin-left: 15px;
+    padding-top: 2px;
     padding-left: 15px;
     position: absolute;
     border: 1px solid #343536;
 }
 
-#contenido .btnUnpload{
+#mainMenu .btnUnpload{
     color: #6c6e71;
     margin-left: 200px;
     height: 30px;
     width: 150px;
 }
 
-#contenido .post {
+#mainMenu .post {
     margin: 25px; 
     margin-left: 10px;
     width: 800px;
@@ -89,7 +91,7 @@ label{
     color: white;
 }
 
-#contenido .post img{
+#mainMenu .post img{
     width: 800px;
     height: 500px;
 }

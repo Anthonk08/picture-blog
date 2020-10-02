@@ -9,44 +9,44 @@
 <body>
     <div id="general">
 
-        <!--Cabeza de la pagina-->
+        <!--Top of page-->
         <header id="header">
             <h1>PHOTO BLOG</h1>
         </header>
         
-        <!--Contenido de la pagina-->
+        <!--Page content-->
         <div id = "content">
-            <form id="contenido" method="post" enctype="multipart/form-data">
+            <form id="mainMenu" method="post" enctype="multipart/form-data">
                 <!--Text area-->
                 <div class="textBox">
                     <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
                 </div>
 
-                <!--Subir imagen-->
+                <!--Upload image-->
                 <div class="bottonPhoto">
                     <input type="file" id="newPhoto" onchange="preview(this)" accept="image/* name="newPhoto">
                     <label for="newPhoto">
-                        Choose an image
+                        CHOOSE AN IMAGE
                     </label>
                 </div>
-                <!--Botón-->
-                <button type="submit" class="btnUnpload"> Unpload </button>
+                <!--Button-->
+                <button type="submit" class="btnUnpload"> UNPLOAD </button>
                 
-                <!--Para que no suba al lado de los botones-->
+                <!--clearfix cleans the floats-->
                 <div class="clearfix"></div>
                 
-                <!--Cuadro donde estara la foto y el texto-->
+                <!--Box where the photo and text will be-->
                 <div id="placePost" class="element">
                     
                 </div>
             </form>
         </div>
 
-        <!--Para que no suba al lado de los botones-->
+        <!--clearfix cleans the floats-->
         <div class="clearfix"></div>
 
         <footer id="footer">
-            Todos los derechos reservados &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>
+            All rights reserved &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>
         </footer>
 
     </div>

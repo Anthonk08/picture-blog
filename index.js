@@ -1,4 +1,4 @@
-document.getElementById('contenido').addEventListener('submit', savePost);
+document.getElementById('mainMenu').addEventListener('submit', savePost);
 
 function savePost(e) {
     e.preventDefault();
@@ -24,7 +24,7 @@ function savePost(e) {
     }
 
     getPost();
-    document.getElementById('contenido').reset();
+    document.getElementById('mainMenu').reset();
 }
 
 //La funcion que capta los datos y muestra la imagen y el texto.
