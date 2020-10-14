@@ -44,25 +44,34 @@ function getPost() {
         if(file){
             /*Post de la imagen*/
             preview.textContent = `${newPhoto}`;
-        
-            let reader = new FileReader();
-            reader.onload = function() {
-            preview.src = reader.result;
-            };
-        
-            reader.readAsDataURL(file);
-            newDiv.appendChild(preview);
+            newImage(preview, file, newDiv);
         }
         
         if(newElementP){
             /*Post del texto*/
             newElementP.textContent = `${textBlog}`;
-            newDiv.appendChild(newElementP);
-            newDiv.classList.add("newPost");
-            postsView.appendChild(newDiv);
+            newText(newElementP, postsView, newDiv);
         }
     }
 
 }
 
-savePost();
+/*Esta función se encarga de enviar la imagen si existe*/
+function newImage(preview, file, newDiv){
+    /*Post de la imagen*/
+    let reader = new FileReader();
+    reader.onload = function() {
+        preview.src = reader.result;
+    };
+        
+    reader.readAsDataURL(file);
+    newDiv.appendChild(preview);
+}
+
+/*Esta función se encarga de enviar el texto si existe*/
+function newText(newElementP, postsView, newDiv){
+    newDiv.appendChild(newElementP);
+    newDiv.classList.add("newPost");
+    postsView.appendChild(newDiv);
+}
+
