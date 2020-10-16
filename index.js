@@ -56,19 +56,18 @@ function getPost() {
 
 }
 
-/*Esta función se encarga de enviar la imagen si existe*/
+/* Esta función se encarga de enviar la imagen si existe */
 function newImage(preview, file, newDiv){
     /*Post de la imagen*/
     let reader = new FileReader();
     reader.onload = function() {
         preview.src = reader.result;
-    };
-        
+    };  
     reader.readAsDataURL(file);
     newDiv.appendChild(preview);
 }
 
-/*Esta función se encarga de enviar el texto si existe*/
+/* Esta función se encarga de enviar el texto si existe */
 function newText(newElementP, postsView, newDiv){
     newDiv.appendChild(newElementP);
     newDiv.classList.add("newPost");
