@@ -27,6 +27,7 @@ function savePost(e) {
     document.getElementById('mainMenu').reset();
 }
 
+let listDate = [];
 //La funcion que capta los datos y muestra la imagen y el texto.
 function getPost() {
     const file = document.querySelector("input[type=file]").files[0];
@@ -36,7 +37,15 @@ function getPost() {
     var newElementP = document.createElement("p");
     var preview = document.createElement("img");
     
-    console.log(newDate());
+    //DATE
+    var newLi = document.createElement("li");
+    let recentPost = document.getElementById("newRecentPost");
+    let date = Date().split("GMT-0400 (hora de Venezuela)");
+    let datePost = date[0].toString();
+    listDate.push(datePost);
+    newDate(newLi, recentPost);
+
+    
     for (let i = 0; i < posts.length; i++) {
         let newPhoto = posts[i].newPhoto;
         let textBlog = posts[i].textBlog;
@@ -75,7 +84,18 @@ function newText(newElementP, postsView, newDiv){
 }
 
 /* Esta función se encarga de la fecha en la que se subio el post */
-function newDate(){
-    return Date();
+function newDate(newLi, recentPost){
+    let reversedDate = listDate.reverse();
+
+    var list = document.getElementById("newRecentPost");
+    if(listDate.length >= 5){
+        //listDate.shift();
+        list.removeChild(list.childNodes[0]);
+    }
+
+    newLi.innerHTML = reversedDate[0];
+    newLi.classList.add("recentPost1");
+    recentPost.appendChild(newLi);
+    
 }
 

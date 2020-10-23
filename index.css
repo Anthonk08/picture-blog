@@ -2,11 +2,11 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 body{
-    background-image: url(./Images/blue\ pared\ background.jpg);
+    background-image: url(./Images/Wallpapers/ws_Blue_vignetting_2560x1600.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
@@ -16,7 +16,8 @@ body{
     width: 80%;
     height: 100px;
     margin: 0px auto;
-    background: rgb(3, 47, 91);
+    background: rgb(11, 94, 177);
+    color: #ffffff;
     text-align: center;
     line-height: 100px;
     position: sticky;
@@ -96,7 +97,7 @@ label{
     height: auto;
     background-color: #222223;
     border: 1px solid #534d4d;
-    color: white;
+    color: #ffffff;
 }
 
 img{
@@ -109,9 +110,10 @@ img{
 #column-2 {
     margin: 6px;
     padding-top: 4px;
-    padding-left: 2px;
-    padding-right: 2px;
-    width: 20%;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 19.5%;
     height: 10%;
     color: rgb(203, 240, 39);
     border: 1px solid #343536;
@@ -125,14 +127,14 @@ img{
 
 #newRecentPost {
     border: 2px solid #343536;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 2px;
+    padding-bottom: 1px;
     padding-left: 7%;
-    margin-bottom: 4%;
-    color: white;
+    margin-bottom: 2px;
+    color: #ffffff;
 }
 
-#newRecentPost li {
+.recentPost1 li {
     margin-top: 2%;
 }
 
@@ -142,6 +144,7 @@ footer {
     width: 80%;
     height: 50px;
     line-height: 50px;
+    color: #6c6e71;
     background-image:#534d4d;
     background-color: #181819;
     font-weight: bold;
@@ -150,5 +153,5 @@ footer {
 }
 
 footer a{
-    color: black;
+    color: #6c6e71;
 }
