@@ -5,7 +5,7 @@ function savePost(e) {
 
     let textBlog = document.getElementById('textBlog').value;
     let newPhoto = document.getElementById('newPhoto').value;
-
+    
     //Objeto
     const post = {
         textBlog,
@@ -33,14 +33,14 @@ function getPost() {
     let posts = JSON.parse(localStorage.getItem("posts"));
     let postsView = document.getElementById("placePost");
     var newDiv = document.createElement("div");
-
     var newElementP = document.createElement("p");
     var preview = document.createElement("img");
     
+    console.log(newDate());
     for (let i = 0; i < posts.length; i++) {
         let newPhoto = posts[i].newPhoto;
         let textBlog = posts[i].textBlog;
-      
+
         if(file){
             /*Post de la imagen*/
             preview.textContent = `${newPhoto}`;
@@ -72,5 +72,10 @@ function newText(newElementP, postsView, newDiv){
     newDiv.appendChild(newElementP);
     newDiv.classList.add("newPost");
     postsView.appendChild(newDiv);
+}
+
+/* Esta función se encarga de la fecha en la que se subio el post */
+function newDate(){
+    return Date();
 }
 
