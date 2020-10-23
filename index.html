@@ -13,46 +13,59 @@
         <h1>PHOTO BLOG</h1>
     </header>
 
-    <div id="general">
+    <div id="content_Father">
+        <div id="column-1">
+            <!--Page content-->
+            <div id = "content">
+                <form id="mainMenu" method="post" enctype="multipart/form-data">
+                    <!--Text area-->
+                    <div class="textBox">
+                        <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
+                    </div>
 
-        <!--Page content-->
-        <div id = "content">
-            <form id="mainMenu" method="post" enctype="multipart/form-data">
-                <!--Text area-->
-                <div class="textBox">
-                    <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
-                </div>
+                    <!--Upload image-->
+                    <div class="bottonPhoto">
+                        <input type="file" id="newPhoto" accept="image/* name="newPhoto">
+                        <label for="newPhoto">
+                            CHOOSE AN IMAGE
+                        </label>
+                    </div>
 
-                <!--Upload image-->
-                <div class="bottonPhoto">
-                    <input type="file" id="newPhoto" accept="image/* name="newPhoto">
-                    <label for="newPhoto">
-                        CHOOSE AN IMAGE
-                    </label>
-                </div>
-                <!--Button-->
-                <button type="submit" class="btnUnpload"> UNPLOAD </button>
+                    <!--Button-->
+                    <button type="submit" class="btnUnpload"> UPLOAD </button>
+                </form>
                 
-            </form>
-            
-            <!--clearfix cleans the floats-->
-            <div class="clearfix"></div>
+                <!--clearfix cleans the floats-->
+                <div class="clearfix"></div>
 
-            <!--Box where the photo and text will be-->
-            <div id="placePost" class="element">
-                    
+                <!--Box where the photo and text will be-->
+                <div id="placePost">
+                        
+                </div>
             </div>
-        </div>
 
+        </div>
+        
+        <div id="column-2">
+            <header>
+                RECENT POST
+            </header>
+            <ul id="newRecentPost">
+                <li>1 Anthony</li>
+                <li>2 Anthony</li>
+                <li>3 Anthony</li>
+                <li>4 Anthony</li>
+                <li>5 Anthony</li>
+            </ul>
+        </div>
+    
         <!--clearfix cleans the floats-->
         <div class="clearfix"></div>
 
         <footer id="footer">
             All rights reserved &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>
         </footer>
-
-    </div>
-    
+    <div>
     <script src="./index.js"></script>
 </body>
 </html>
