@@ -99,3 +99,6 @@ function newDate(newLi, recentPost){
     
 }
 
+/*Esta función maneja la paginación*/
+
+

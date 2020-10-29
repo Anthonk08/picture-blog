@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picture Blog</title>
     <link rel="stylesheet" href="./index.css" title="text/css">
+    <link rel="stylesheet" href="./jquery-3.5.1.min.js">
 </head>
 <body>
 
@@ -34,18 +35,16 @@
                     <!--Button-->
                     <button type="submit" class="btnUnpload"> UPLOAD </button>
                 </form>
-                
-                <!--clearfix cleans the floats-->
-                <div class="clearfix"></div>
 
-                <!--Box where the photo and text will be-->
-                <div id="placePost">
-                        
-                </div>
             </div>
 
         </div>
         
+        <!--Box where the photo and text will be-->
+        <div id="placePost">
+                        
+        </div>
+
         <div id="column-2">
             <header>
                 RECENT POST
@@ -55,23 +54,15 @@
             </ul>
         </div>
     
-        <section class="pagination">
-            <ul>
-                <li><a href="./index.html">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-            </ul>
+        <section class="pagination" id="pagination">
+            
         </section>
-
-        <!--clearfix cleans the floats-->
-        <div class="clearfix"></div>
         
         <footer id="footer">
             All rights reserved &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>
         </footer>
     <div>
+
     <script src="./index.js"></script>
 </body>
 </html>
