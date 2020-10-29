@@ -138,6 +138,34 @@ img{
     margin-top: 2%;
 }
 
+/*Pagination*/
+.pagination {
+    margin: 20px 0;
+    padding-left: 40%;
+}
+
+.pagination ul{
+    list-style: none;
+    text-align: center;
+}
+
+.pagination ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pagination ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background: rgb(11, 94, 177);
+    text-decoration: none;
+}
+
+.pagination ul li a:hover{
+    background: rgb(11, 127, 177);
+}
+
 /*Pie de página*/
 footer {
     margin: 0px auto;
