@@ -3,6 +3,8 @@
     padding: 0px;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    border-radius: 10px;
     
 }
 body{
@@ -17,15 +19,13 @@ body{
     height: 100px;
     margin: 0px auto;
     background: rgb(11, 94, 177);
-    color: #ffffff;
     text-align: center;
     line-height: 100px;
-    position: sticky;
-    top: 0px;
 }
 #content_Father {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 #column-1 {
@@ -54,9 +54,9 @@ body{
     padding-left: 2px;
     height: 30px;
     width: 195%;
-    color: #6c6e71;
     background-color: #1a1a1b;
     border: 1px solid #343536;
+    
 }
 
 input[type="file"]{
@@ -66,7 +66,6 @@ input[type="file"]{
 label{
     position: absolute;
     left: 44%;
-    color: #6c6e71;
     font-size: 15px;
     margin: 1px;
     margin-left: 5px;
@@ -81,48 +80,56 @@ label{
 .btnUnpload{
     position: absolute;
     left: 47%;
-    color: #232425;
     margin-top: 1px;
     margin-left: 10%;
     height: 30px;
     width: 10%;
     font-weight: bold;
+    color: black;
 }
 
+/*Post image-text*/
 #placePost .newPost {
     padding: 5px;
-    margin: 20px; 
-    margin-left: 5%;
-    width: 800px;
+    margin: 1.5%; 
+    margin-left: 17%;
+    width: 885px;
     height: auto;
     background-color: #222223;
     border: 1px solid #534d4d;
-    color: #ffffff;
 }
 
-img{
-    width: 800px;
+img {
+    width: 884px;
     height: 500px;
     border: 1px solid #000000;
 }
 
+p {
+    padding: 10px;
+    text-align: justify;
+}
+
 /*Columna Resent Post*/
 #column-2 {
-    margin: 6px;
-    padding-top: 4px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 1%;
+    margin-top: -2.9%;
+    margin-left: 10.7%;
+    padding-top: 0px;
     padding-bottom: 4px;
     padding-left: 4px;
     padding-right: 4px;
     width: 19.5%;
     height: 10%;
-    color: rgb(203, 240, 39);
     border: 1px solid #343536;
     background-color: #181819;
     font-weight: bold;
+}
 
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 14%;
+.recentPost1 li {
+    margin-top: 2%;
 }
 
 #newRecentPost {
@@ -131,11 +138,6 @@ img{
     padding-bottom: 1px;
     padding-left: 7%;
     margin-bottom: 2px;
-    color: #ffffff;
-}
-
-.recentPost1 li {
-    margin-top: 2%;
 }
 
 /*Pagination*/
@@ -157,7 +159,6 @@ img{
 .pagination ul li a{
     display: block;
     padding: 10px 20px;
-    color: #ffffff;
     background: rgb(11, 94, 177);
     text-decoration: none;
 }
@@ -172,14 +173,10 @@ footer {
     width: 80%;
     height: 50px;
     line-height: 50px;
-    color: #6c6e71;
     background-image:#534d4d;
     background-color: #181819;
     font-weight: bold;
     text-align: center;
     border-top: 1px solid #343536;
-}
-
-footer a{
-    color: #6c6e71;
+    
 }
