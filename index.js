@@ -22,6 +22,7 @@ function savePost(e) {
         posts.push(post);
         localStorage.setItem('posts', JSON.stringify(posts));
     }
+    
 
     getPost();
     document.getElementById('mainMenu').reset();
@@ -45,10 +46,16 @@ function getPost() {
     listDate.push(datePost);
     newDate(newLi, recentPost);
 
-    
+    let listName = [];
     for (let i = 0; i < posts.length; i++) {
         let newPhoto = posts[i].newPhoto;
         let textBlog = posts[i].textBlog;
+
+        //console.log(newPhoto);
+        let name = newPhoto.toString();
+        //Agregar nombre
+        //listName.push(name.split('C:(\)fakepath(\)'));
+        //console.log(listName);
 
         if(file){
             /*Post de la imagen*/
@@ -85,11 +92,11 @@ function newText(newElementP, postsView, newDiv){
 
 /* Esta función se encarga de la fecha en la que se subio el post */
 function newDate(newLi, recentPost){
+    console.log(listDate);
     let reversedDate = listDate.reverse();
 
     var list = document.getElementById("newRecentPost");
     if(listDate.length >= 5){
-        //listDate.shift();
         list.removeChild(list.childNodes[0]);
     }
 
@@ -100,5 +107,30 @@ function newDate(newLi, recentPost){
 }
 
 /*Esta función maneja la paginación*/
-
-
+/*
+let pageNumber=1; 
+let pageSize=1;
+let postsHtml="";
+let pagination;
+let pageCont =Math.floor(posts.length/pageSize);
+function paginate(array, page_size, page_number) {
+    return array.slice((page_number - 1) * page_size, page_number * page_size);
+}
+function nextPage(){
+    pageNumber ++;
+    showPost(pagination);
+}
+function previusPage(){
+    pageNumber --;
+    showNoticias(pagination);
+}
+function showPost(_posts){
+    var pagination = paginate(posts,pageSize,pageNumber);
+    console.log("nextPage",pagination)
+    postsHtml+= pageNumber > 1  ? " <button onclick='previusPage()'>Anterior</button>":"";
+    postsHtml+= pageNumber < pageCont ?(" <button onclick='nextPage()'>Siguiente</button>"):"" ;
+    document.getElementById("pagination").innerHTML="";
+    document.getElementById("pagination").innerHTML=postsHtml;
+}
+showPost(posts);
+*/
