@@ -7,42 +7,49 @@
     <link rel="stylesheet" href="./index.css" title="text/css">
 </head>
 <body>
+    <div id="content_father">
+        <!--Top of page-->
+        <header id="header">
+            <h1>PHOTO BLOG</h1>
+        </header>
 
-    <!--Top of page-->
-    <header id="header">
-        <h1>PHOTO BLOG</h1>
-    </header>
-    <div id="content_Father">
-        
-        <div id="column-1">
+        <div id="menu_option">
+            
             <!--Page content-->
-             
             <form id="mainMenu" method="post" enctype="multipart/form-data">
-                <!--Text area-->
+                <!--Text title-->
+                <div class="text_title">
+                    <textarea id="textTitle" cols="75.7" rows="2" placeholder="Title (obligatory)"></textarea>
+                </div>
+
+                <!--Text message-->
                 <div class="textBox">
-                    <textarea id="textBlog" cols="30" rows="10" placeholder="Create Post"></textarea>
+                    <textarea id="textBlog" cols="75.7" rows="8" placeholder="Text (optional)"></textarea>
                 </div>
-                <!--Upload image-->
-                <div class="bottonPhoto">
-                    <input type="file" id="newPhoto" accept="image/* name="newPhoto">
-                    <label for="newPhoto">
-                        CHOOSE AN IMAGE
-                    </label>
+
+                <div class="row_bottons">
+                    <!--Upload image-->
+                    <div class="btnUnpload">
+                        <input type="file" id="newPhoto" accept="image/*" name="newPhoto">
+                        <label for="newPhoto">
+                            CHOOSE AN IMAGE
+                        </label>
+                    </div>
+
+                    <!--Button-->
+                    <button type="submit" class="btnUnpload"> UPLOAD </button>
                 </div>
-                <!--Button-->
-                <button type="submit" class="btnUnpload"> UPLOAD </button>
             </form>
            
         </div>
-        <div id="column-1">
-            <div id = "content">
-                <!--Box where the photo and text will be-->
-                <div id="placePost"></div>
-            </div>
+
+        <div id = "content">
+            <!--Box where the photo and text will be-->
+            <div id="placePost"></div>
         </div>
         
-        <div id="column-2">
-            <header>
+        <div id="sidebar">
+            <header id="recent_column">
                 RECENT POST
             </header>
             <ol id="newRecentPost">
@@ -50,9 +57,15 @@
             </ol>
         </div>
 
-        <section class="pagination" data-pagination="2">
-            
-        </section>
+        <div id="pagination" data-pagination="2">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
         
         <footer id="footer">
             All rights reserved &copy; <a href="https://github.com/Anthonk08" target="_blank">Anthony Tineo Cabreja</a>

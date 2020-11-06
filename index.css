@@ -1,70 +1,90 @@
 * {
-  border-radius: 10px;
+  margin: 0; 
+  padding: 0;
+  border-radius: 5px;
   color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0px; padding: 0px;
-  text-decoration: none;
 }
 
 body {
-  background-attachment: fixed;
+  background-attachment: fixed; background-size: 100%;
   background-image: url(./Images/Wallpapers/ws_Blue_vignetting_2560x1600.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#header {
-  background: rgb(11, 94, 177);
-  line-height: 100px;
-  margin: 0px auto; height: 100px; width: 80%;
+/*Caja padre*/
+#content_father {
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto;
+  display: grid;
+  grid-gap: 15px;
+
+  /*Las columnas que necesito*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, auto);
+}
+
+#content_father > div {
+  padding: 5px;
+}
+
+#content_father > #header, #content_father > #menu_option, #content_father > #sidebar, #content_father > #footer, #placePost .newPost {
+  background: #005C97;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#content_father > #header, #content_father > #footer {
+  padding: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  width: 96%;
+}
+
+/*HEADER*/
+#content_father #header {
+  justify-content: center;
   text-align: center;
+  grid-row: 1;
+  
 }
 
-#content_Father {
-  border: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 1%;
+/*columnas opciones y el sidebar*/
+#content_father #menu_option {
+  grid-column: span 2; 
+  grid-row: 2;
 }
 
-
-#column-1 {
-  border: none;
-  height: 5%; width: 50%;
-  margin-left: 170px; padding-right: 2%; 
-}
-
-#column-2 {
-  margin-top: -2.4%;
-  width: 20%; height: 10%;
-  padding: 0.5%; margin-left: 5%;
+#content_father #sidebar {
+  grid-row: 2;
+  grid-column: 3;
+  max-height: 70%;
   position: -webkit-sticky; position: sticky; top: 1%;
 }
 
-/*Post image-text*/
-#placePost .newPost {
-  flex: 1;
-  padding: 5px; margin: 5%;
-  min-width: 740px; height: auto;
-  background-color: #222223;
-}
-
-img {
-  width: 740px; height: auto;
-}
-
-p {
+#content_father #sidebar #recent_column {
   padding: 5px;
-  text-align: justify;
+  font-weight: bold;
+}
+
+.recentPost1 {
+  margin-top: 1%;
+}
+
+#newRecentPost {
+  border: 1px solid white;
+  height: 70%;
+  padding-top: 2px; padding-bottom: 5px; padding-left: 10%;
 }
 
 #mainMenu {
-  margin: 2px;
+  margin: 10px;
 }
 
-#mainMenu .textBox #textBlog {
-  float: left; text-align: left; font-size: 15px;
-  height: 30px; width: 53%; padding-left: 10px;
+#mainMenu #textBlog, #mainMenu #textTitle { 
+  font-size: 15px;
+  padding-left: 10px;
   background-color: #1a1a1b;
 }
 
@@ -72,66 +92,89 @@ input[type="file"] {
   display: none;
 }
 
-label {
-  position: absolute;
-  left: 41%; height: 25px; width: 10%;
-  padding: 1px; padding-top: 5.5px;
-  text-align: center; font-size: 12px;
+.row_bottons {
+  display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .btnUnpload {
-  position: absolute;
-  left: 44%; margin-top: 1px; margin-left: 10%;
-  height: 30px; width: 10%;
+  margin: 0 5px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;text-align: center; font-size: 13px;
+  width: 22%; 
+  height: 30px;
   font-weight: bold;
-  color: black;
+  background-color: #1a1a1b;
+  color: white; 
+  border: none;
 }
 
-/*Columna Resent Post*/
-.recentPost1 li {
-  margin-top: 2%;
+/*Los posts con imagenes y texto*/
+#content_father #content {
+  grid-column: span 2;  
+  grid-row: 3/4;
 }
 
-#newRecentPost {
-  border: 2px solid #343536;
-  padding-top: 2px; padding-bottom: 1px; padding-left: 7%;
+/*Post image-text*/
+#placePost .newPost {
+  margin: 0.5px; padding: 8px;
+  margin-top: 15px; 
+  min-width: 640px; height: auto;
 }
 
-/*Pagination*/
-.pagination {
-  margin: 20px 0; padding-left: 40%;
+#placePost img {
+  width: 640px; height: auto;
 }
 
-.pagination ul {
+#placePost p {
+  padding: 8px; text-align: justify;
+  background-color: #15151a;
+  border: 1px solid rgba(9, 134, 201, 0.659);
+}
+
+/*Paginacion*/
+#content_father #pagination {
+  grid-column: 2 / 3;
+  grid-row: 5;
+   
+}
+
+#pagination ul {
   list-style: none;
   text-align: center;
 }
 
-.pagination ul li {
+#pagination ul li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 2px;
 }
 
-.pagination ul li a {
-  display: block; padding: 10px 20px;
+#pagination ul li a {
+  display: block; padding: 10px 15px;
   background: rgb(11, 94, 177);
   text-decoration: none;
 }
 
-.pagination ul li a:hover {
+#pagination ul li a:hover {
   background: rgb(11, 127, 177);
 }
 
 
-/*Pie de página*/
-footer {
+/*FOOTER*/
+#content_father #footer{
+  grid-row: 6;
   margin: 0px auto;
-  width: 80%; height: 50px;
+  height: 50px;
   line-height: 50px;
   background-image: #534d4d;
   font-weight: bold; text-align: center;
 }
 
-footer , label, #column-2{
-    background-color: #181819;
-}
+
+
+
+
+
+
