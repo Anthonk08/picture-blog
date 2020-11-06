@@ -20,11 +20,11 @@ function savePost(e) {
     if (!localStorage.getItem('posts')){
         //Arreglo
         let posts = [];
-        posts.push(post);
+        posts.unshift(post);
         localStorage.setItem('posts', JSON.stringify(posts));
     }else {
         let posts = JSON.parse(localStorage.getItem('posts'));
-        posts.push(post);
+        posts.unshift(post);
         localStorage.setItem('posts', JSON.stringify(posts));
     }
     
@@ -50,23 +50,22 @@ function getPost() {
     let datePost = date[0].toString();
     listDate.push(datePost);
     newDate(newLi, recentPost);
+    
+    let newPhoto = posts[0].newPhoto;
+    let textBlog = posts[0].textBlog;
 
-    for (let i = 0; i < posts.length; i++) {
-        let newPhoto = posts[i].newPhoto;
-        let textBlog = posts[i].textBlog;
-
-        if(file){
-            /*Post de la imagen*/
-            preview.textContent = `${newPhoto}`;
-            newImage(preview, file, newDiv);
-        }
-        
-        if(newElementP){
-            /*Post del texto*/
-            newElementP.textContent = `${textBlog}`;
-            newText(newElementP, postsView, newDiv);
-        }
+    if(file){
+        /*Post de la imagen*/
+        preview.textContent = `${newPhoto}`;
+        newImage(preview, file, newDiv);
     }
+    
+    if(newElementP){
+        /*Post del texto*/
+        newElementP.textContent = `${textBlog}`;
+        newText(newElementP, postsView, newDiv);
+    }
+    
 
 }
 
@@ -78,19 +77,18 @@ function newImage(preview, file, newDiv){
         preview.src = reader.result;
     };  
     reader.readAsDataURL(file);
-    newDiv.appendChild(preview);
+    newDiv.prepend(preview);
 }
 
 /* Esta función se encarga de enviar el texto si existe */
 function newText(newElementP, postsView, newDiv){
     newDiv.appendChild(newElementP);
     newDiv.classList.add("newPost");
-    postsView.appendChild(newDiv);
+    postsView.prepend(newDiv);
 }
 
 /* Esta función se encarga de la fecha en la que se subio el post */
 function newDate(newLi, recentPost){
-    console.log(listDate);
     let reversedDate = listDate.reverse();
 
     var list = document.getElementById("newRecentPost");
