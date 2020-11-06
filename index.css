@@ -9,7 +9,8 @@ body {
   background-attachment: fixed; background-size: 100%;
   background-image: url(./Images/Wallpapers/ws_Blue_vignetting_2560x1600.jpg);
   background-repeat: no-repeat;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+
 }
 
 /*Caja padre*/
@@ -69,7 +70,12 @@ body {
 }
 
 .recentPost1 {
-  margin-top: 1%;
+  padding: auto;
+  
+}
+
+.recentPost1 > a {
+  text-decoration: none;
 }
 
 #newRecentPost {
@@ -122,6 +128,16 @@ input[type="file"] {
   margin: 0.5px; padding: 8px;
   margin-top: 15px; 
   min-width: 640px; height: auto;
+}
+
+#placePost .titlePost{
+  padding: 5px;
+  font-weight: bold;
+}
+
+#placePost .datePost {
+  padding: 5px;
+  color: #9b9595;
 }
 
 #placePost img {
