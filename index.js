@@ -1,3 +1,8 @@
+window.onload = function() {
+    localStorage.clear();
+    sessionStorage.clear();
+};
+
 document.getElementById('mainMenu').addEventListener('submit', savePost);
 
 function savePost(e) {
@@ -46,16 +51,9 @@ function getPost() {
     listDate.push(datePost);
     newDate(newLi, recentPost);
 
-    let listName = [];
     for (let i = 0; i < posts.length; i++) {
         let newPhoto = posts[i].newPhoto;
         let textBlog = posts[i].textBlog;
-
-        //console.log(newPhoto);
-        let name = newPhoto.toString();
-        //Agregar nombre
-        //listName.push(name.split('C:(\)fakepath(\)'));
-        //console.log(listName);
 
         if(file){
             /*Post de la imagen*/
