@@ -6,7 +6,8 @@
 }
 
 body {
-  background-attachment: fixed; background-size: 100%;
+  background-attachment: fixed; 
+  background-size: 100%;
   background-image: url(./Images/Wallpapers/ws_Blue_vignetting_2560x1600.jpg);
   background-repeat: no-repeat;
   font-family: 'Noto Sans JP', sans-serif;
@@ -31,9 +32,9 @@ body {
 }
 
 #content_father > #header, #content_father > #menu_option, #content_father > #sidebar, #content_father > #footer, #placePost .newPost {
-  background: #005C97;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #005C97; 
+  background: -webkit-linear-gradient(to right, #363795, #005C97);  
+  background: linear-gradient(to right, #363795, #005C97); 
 }
 
 #content_father > #header, #content_father > #footer {
@@ -61,7 +62,8 @@ body {
   grid-row: 2;
   grid-column: 3;
   max-height: 70%;
-  position: -webkit-sticky; position: sticky; top: 1%;
+  position: -webkit-sticky; 
+  position: sticky; top: 1%;
 }
 
 #content_father #sidebar #recent_column {
@@ -81,7 +83,9 @@ body {
 #newRecentPost {
   border: 1px solid white;
   height: 70%;
-  padding-top: 2px; padding-bottom: 5px; padding-left: 10%;
+  padding-top: 2px; 
+  padding-bottom: 5px; 
+  padding-left: 10%;
 }
 
 #mainMenu {
@@ -108,7 +112,9 @@ input[type="file"] {
   margin: 0 5px; 
   display: flex;
   align-items: center;
-  justify-content: center;text-align: center; font-size: 13px;
+  justify-content: center;
+  text-align: center; 
+  font-size: 13px;
   width: 22%; 
   height: 30px;
   font-weight: bold;
@@ -125,9 +131,11 @@ input[type="file"] {
 
 /*Post image-text*/
 #placePost .newPost {
-  margin: 0.5px; padding: 8px;
+  margin: 0.5px; 
+  padding: 8px;
   margin-top: 15px; 
-  min-width: 640px; height: auto;
+  min-width: 640px; 
+  height: auto;
 }
 
 #placePost .titlePost{
@@ -141,11 +149,13 @@ input[type="file"] {
 }
 
 #placePost img {
-  width: 640px; height: auto;
+  width: 640px; 
+  height: auto;
 }
 
 #placePost p {
-  padding: 8px; text-align: justify;
+  padding: 8px; 
+  text-align: justify;
   background-color: #15151a;
   border: 1px solid rgba(9, 134, 201, 0.659);
 }
@@ -168,7 +178,8 @@ input[type="file"] {
 }
 
 #pagination ul li a {
-  display: block; padding: 10px 15px;
+  display: block; 
+  padding: 10px 15px;
   background: rgb(11, 94, 177);
   text-decoration: none;
 }
@@ -185,7 +196,8 @@ input[type="file"] {
   height: 50px;
   line-height: 50px;
   background-image: #534d4d;
-  font-weight: bold; text-align: center;
+  font-weight: bold; 
+  text-align: center;
 }
 
 
