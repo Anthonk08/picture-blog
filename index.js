@@ -145,30 +145,30 @@ function newRecentPosts(newLi, recentPost, newA, idPost){
 
 
 /*Esta función maneja la paginación*/
-/*
-let pageNumber=1; 
-let pageSize=1;
-let postsHtml="";
-let pagination;
-let pageCont =Math.floor(posts.length/pageSize);
-function paginate(array, page_size, page_number) {
-    return array.slice((page_number - 1) * page_size, page_number * page_size);
+function paginationSize() {
+    let pageNumber=1; 
+    let pageSize=4;
+    let postsHtml="";
+    let pagination;
+    let pageCont =Math.floor(posts.length/pageSize);
+    function paginate(array, page_size, page_number) {
+        return array.slice((page_number - 1) * page_size, page_number * page_size);
+    }
+    function nextPage(){
+        pageNumber ++;
+        showPost(pagination);
+    }
+    function previusPage(){
+        pageNumber --;
+        showNoticias(pagination);
+    }
+    function showPost(_posts){
+        var pagination = paginate(posts,pageSize,pageNumber);
+        console.log("nextPage",pagination)
+        postsHtml+= pageNumber > 1  ? " <button onclick='previusPage()'>Anterior</button>":"";
+        postsHtml+= pageNumber < pageCont ?(" <button onclick='nextPage()'>Siguiente</button>"):"" ;
+        document.getElementById("pagination").innerHTML="";
+        document.getElementById("pagination").innerHTML=postsHtml;
+    }
+    showPost(posts);
 }
-function nextPage(){
-    pageNumber ++;
-    showPost(pagination);
-}
-function previusPage(){
-    pageNumber --;
-    showNoticias(pagination);
-}
-function showPost(_posts){
-    var pagination = paginate(posts,pageSize,pageNumber);
-    console.log("nextPage",pagination)
-    postsHtml+= pageNumber > 1  ? " <button onclick='previusPage()'>Anterior</button>":"";
-    postsHtml+= pageNumber < pageCont ?(" <button onclick='nextPage()'>Siguiente</button>"):"" ;
-    document.getElementById("pagination").innerHTML="";
-    document.getElementById("pagination").innerHTML=postsHtml;
-}
-showPost(posts);
-*/
