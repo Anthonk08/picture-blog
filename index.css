@@ -8,7 +8,8 @@
 body {
   background-attachment: fixed; 
   background-size: 100%;
-  background-image: url(./Images/Wallpapers/ws_Blue_vignetting_2560x1600.jpg);
+  /*background-color: #C4E1F3;*/
+  background-image: url(./Images/Wallpapers/Azul\ claro.jpg);
   background-repeat: no-repeat;
   font-family: 'Noto Sans JP', sans-serif;
 
@@ -145,7 +146,7 @@ input[type="file"] {
 
 #placePost .datePost {
   padding: 5px;
-  color: #9b9595;
+  color: #e4dbdb;
 }
 
 #placePost img {
