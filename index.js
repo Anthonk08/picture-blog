@@ -52,10 +52,12 @@ function getPost() {
     const newElementP = document.createElement("p");
     const preview = document.createElement("img");
     const newElementTitle = document.createElement("h2");
-    const elementDate = document.createElement("h5"); 
+    const elementDate = document.createElement("h5");
+    const newButton = document.createElement("button"); 
+    const newTextArea = document.createElement("textarea");
 
     //DATE
-    const date = Date().split("GMT-0400 (hora de Venezuela)");
+    const date = Date().split("GMT-0400 (hora estándar del Atlántico)");
     let datePost = date[0].toString();
 
     //Variables para el post
@@ -70,17 +72,27 @@ function getPost() {
     let idPost= `post${posts.length-1}`;
     newRecentPosts(newLi, recentPost, newA, idPost);
 
+    //Titulo y fecha del POST
     newElementTitle.textContent = `${textTitle}`;
     newDiv = newTitle(newElementTitle, newDiv);
     elementDate.textContent = datePost;
     newDiv = newDate(datePost, elementDate, newDiv);
     
-    //Función para determinar las partes del POST: imagen y el parrafo
-    partsOfPost(file, textBlog, newPhoto, preview, newDiv, newElementP, textBlog);
-
+    //Agregar id a los POST
     newDiv.setAttribute("id", idPost);
     newDiv.classList.add("newPost");
     postsView.prepend(newDiv);
+
+    //Función para determinar las partes del POST: imagen y el parrafo
+    partsOfPost(file, textBlog, newPhoto, preview, newDiv, newElementP, textBlog);
+
+    //Funcion que maneja el botón de likes y la cantidad
+    //newDiv = btnLike(newDiv);
+
+    //Funcion de los comentarios de cada POST
+    let numBotton = `btnComment${posts.length-1}`;
+    let numIdTextArea = `idTextArea${posts.length-1}`;
+    newDiv = commentPost(newButton, newDiv, numBotton, newTextArea, numIdTextArea);
 }
 
 //Función para determinar las partes del POST
@@ -148,11 +160,61 @@ function newRecentPosts(newLi, recentPost, newA, idPost){
     recentPost.prepend(newLi);
 }
 
-//Funcion de los comentarios de cada POST
-function commentPost(){
-    
+//Funcion que se encarga del boton de likes
+/*
+function btnLikes(newDiv){
+    const newButtonLike = document.createElement("button");  
 }
+*/
 
+//Funcion de los comentarios de cada POST
+function commentPost(newButton, newDiv, numBotton, newTextArea, numIdTextArea){
+    const btnSend = document.createElement("button");
+    const commentDiv = document.createElement("div");
+    const commentDivBTN = document.createElement("div");
+    const sendCommnet = document.createElement("div");
+    const array = [];
+    const commentDivAll = document.createElement("div");
+    commentDivAll.setAttribute("id", "allDivComment");
+    sendCommnet.setAttribute("id", "sendCommnet");
+    newButton.textContent = "COMMENTS";
+    newButton.classList.add("commentBtn");
+    newButton.setAttribute("id", numBotton);
+    commentDivBTN.appendChild(newButton);
+    newDiv.appendChild(commentDivBTN);
+    newDiv.appendChild(commentDivAll);
+    
+    newButton.addEventListener('click', function(){
+        sendCommnet.style.display = 'block';
+        newButton.setAttribute('disabled',true);
+        btnSend.className = "btnSendComment";
+        btnSend.textContent = 'SEND COMMENT';
+        newTextArea.className = "commentTextArea";
+        newTextArea.setAttribute("id", numIdTextArea);
+        sendCommnet.appendChild(newTextArea);
+        sendCommnet.appendChild(btnSend);
+        commentDiv.appendChild(sendCommnet);
+        commentDivBTN.appendChild(commentDiv);
+        btnSend.addEventListener('click', function(){
+            const valueText = document.getElementById(numIdTextArea).value;
+            if(valueText){
+                array.push(valueText);
+                commentDivAll.innerHTML = "";
+                let fragDocument = document.createDocumentFragment();
+                for (let i = 0; i < array.length; ++i) {
+                    let parrafos = document.createElement("p");
+                    parrafos.className = "pComment";
+                    parrafos.textContent = array[i];
+                    fragDocument.appendChild(parrafos);
+                } 
+                commentDivAll.appendChild(fragDocument);
+            }
+            document.getElementById(numIdTextArea).value = '';
+        });
+
+    });
+    return newDiv;
+}
 
 /*Esta función maneja la paginación*/
 /*

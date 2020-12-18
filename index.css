@@ -106,7 +106,8 @@ input[type="file"] {
 .row_bottons {
   display: flex;
 	justify-content: flex-end;
-	align-items: center;
+  align-items: center;
+  
 }
 
 .btnUnpload {
@@ -121,7 +122,8 @@ input[type="file"] {
   font-weight: bold;
   background-color: #1a1a1b;
   color: white; 
-  border: none;
+  cursor: pointer;
+  border: 1px solid rgba(9, 134, 201, 0.659);
 }
 
 /*Los posts con imagenes y texto*/
@@ -159,6 +161,71 @@ input[type="file"] {
   text-align: justify;
   background-color: #15151a;
   border: 1px solid rgba(9, 134, 201, 0.659);
+}
+
+/*Btn comentario*/
+#placePost .commentBtn{
+  padding: 4px;
+  cursor: pointer;
+  background-color: #15151a;
+  border: 1px solid rgba(9, 134, 201, 0.659);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  min-height: 25px;
+  min-width: 85px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.commentTextArea {
+  color: white;
+  background-color: #1a1a1b;
+  padding: 10px 10px 10px 10px;
+  width: 80%;
+  min-height: 60px;
+  height: auto auto;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-left: 53px;
+}
+
+.btnSendComment {
+  margin-left: 75%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  font-size: 12px;
+  width: 17%; 
+  height: 25px;
+  font-weight: bold;
+  color: white;  
+  background-color: #1a1a1b;
+  border: 1px solid rgba(9, 134, 201, 0.659);
+}
+
+#allDivComment{
+  margin: 0;
+  margin-left: 55px;
+  margin-bottom: 10px;
+  width: 83%;
+}
+
+#allDivComment .pComment{
+  margin-top: 5px;
+  background-color: #323238;
+}
+
+
+/*btn like*/
+#placePost .btnLike{
+  cursor: pointer;
 }
 
 /*Paginacion*/
